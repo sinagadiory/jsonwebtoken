@@ -102,6 +102,6 @@ Content-Type: application/json
 ```
 
 
-<img style="width:27%;float:right;border-radius:150px"  src="https://res.cloudinary.com/dt3pzvmfg/image/upload/v1658573452/x1bbffnq1cold8srit8p.jpg" />
+<!-- <img style="width:27%;float:right;border-radius:150px"  src="https://res.cloudinary.com/dt3pzvmfg/image/upload/v1658573452/x1bbffnq1cold8srit8p.jpg" /> -->
 
 
