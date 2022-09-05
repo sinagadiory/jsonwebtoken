@@ -1,6 +1,8 @@
 ## How to run
-* npm install selanjutnya npm run start.
+* npm install selanjutnya npm run start. **server berjalan di port 8000**
 * untuk mengetest api dapat menggunakan `request.rest` yang sudah disediakan supaya lebih mudah.
+* accessToken berlaku selama 30s, jika melewati waktu tersebut maka diharuskan login kembali untuk mengakses accessToken kembali.
+* Ketika menginputkan accessToken pada headers `get /user` atau `get /users`, selalu dimulai dengan **Bearer** kemudian spasi dan accessToken. Untuk detailnya bisa dilihat dibagian `request.rest`
 
 ### Directory Structure
 ```bash
@@ -30,11 +32,7 @@
 └───request.rest
 ```
 
-### Endpoint
-
-GET 
-
-#### Dependenci
+#### Dependencies
 ```json
  "dependencies": {
     "body-parser": "^1.20.0",
@@ -44,10 +42,40 @@ GET
     "nodemon": "^2.0.19"
   }
 ```
+### Endpoint
+```javascript
+GET /      //Menampilkan "Halo Selamat Datang"
+POST /login    //Login dengan username,dan password untuk mendapatkan accessToken
+GET /user  //get user yang sudah login dengan menginputkan accessToken yang diperoleh dari proses login
+GET /users  //get users  dengan menginputkan accesToken yang diperoleh dari login
+POST /register //register userbaru
+```
 
+#### Daftar username dan password
+```json
+[
+    {
+        "id": 1,
+        "username": "sinaga_diory",
+        "password": "1234"
+    },
+    {
+        "id": 2,
+        "username": "ferdy_sambo",
+        "password": "303"
+    },
+    {
+        "id": 3,
+        "username": "bharada_e",
+        "password": "fer303"
+    }
+]
+```
+
+
+#### Penjelasan mengenai accessToken
 ```javascript
 // accessToken diperoleh ketika user login dengan username dan password yang benar
-
 const handleLoginUser = (req, res) => {
     const { username, password } = req.body
     const user = dataUsers.find((user) => (user.username == username))
@@ -71,8 +99,9 @@ const authentication = (req, res, next) => {
 }
 ```
 
+#### Request.rest
 ```r
-###  Login untuk Mendapatkan Token
+###  Login untuk Mendapatkan accessToken
 POST http://localhost:8000/login
 Content-Type: application/json
 

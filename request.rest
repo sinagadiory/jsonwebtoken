@@ -1,4 +1,4 @@
-###  Login untuk Mendapatkan Token
+###  Login untuk Mendapatkan accessToken
 POST http://localhost:8000/login
 Content-Type: application/json
 
@@ -9,12 +9,12 @@ Content-Type: application/json
 
 ### Get user dengan menginputkan accessToken yang didapat dari proses Login Diatas
 GET http://localhost:8000/user
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJoYXJhZGFfZSIsInBhc3N3b3JkIjoiZmVyMzAzIiwidXNlcklkIjozLCJpYXQiOjE2NjIyMjE5OTIsImV4cCI6MTY2MjIyMjAyMn0.UC7fa2_YhvF8etTC1dHLUgxq5Bem6UboteAmC0W-LTk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJoYXJhZGFfZSIsInBhc3N3b3JkIjoiZmVyMzAzIiwidXNlcklkIjozLCJpYXQiOjE2NjIzNTkzNDksImV4cCI6MTY2MjM1OTM3OX0.rf6EcmfRZTt3tKAVbqLri0dbNE8d-so_ImPqd6AnWR8
 
 
 ### Get Users dengan menginputkan accessToken yang didapat dari proses Login Diatas
 GET http://localhost:8000/users
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJoYXJhZGFfZSIsInBhc3N3b3JkIjoiZmVyMzAzIiwidXNlcklkIjozLCJpYXQiOjE2NjIyMjEyNjYsImV4cCI6MTY2MjIyMTI5Nn0.haSRp7pddlIxXQjUsxknbfDseKvk1WIJCzA9iUriYHc
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJoYXJhZGFfZSIsInBhc3N3b3JkIjoiZmVyMzAzIiwidXNlcklkIjozLCJpYXQiOjE2NjIzNTkzNDksImV4cCI6MTY2MjM1OTM3OX0.rf6EcmfRZTt3tKAVbqLri0dbNE8d-so_ImPqd6AnWR8
 
 
 ###  Register user, menambahkan user di folder app/models/users.json
