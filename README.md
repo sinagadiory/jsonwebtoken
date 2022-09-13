@@ -49,9 +49,8 @@
 ### Endpoint
 
 ```javascript
-GET / //Menampilkan "Halo Selamat Datang"
-  POST /
-  login; //Login dengan username,dan password untuk mendapatkan accessToken
+GET / ;//Menampilkan "Halo Selamat Datang"
+POST /login; //Login dengan username,dan password untuk mendapatkan accessToken
 GET / user; //get user yang sudah login dengan menginputkan accessToken yang diperoleh dari proses login
 GET / users; //get users  dengan menginputkan accesToken yang diperoleh dari login
 POST / register; //register userbaru
